@@ -24,58 +24,9 @@ tl
 
 
 
-// intersection oberver
-let boxContent1 = document.querySelector(".box-content-1");
-let boxContent2 = document.querySelector(".box-content-2");
-let boxContent3 = document.querySelector(".box-content-3");
 
-let Options = {
-    threshold: 1,
-    rootMargin: "-150px 0px 100px 0px",
-}
-const box1observer = new IntersectionObserver(function(entries, box1observer) {
-    entries.forEach(entry => {
-        // console.log(entry.target);
-        if (!entry.isIntersecting) {
-            entry.target.classList.add("blured");
-            entry.target.classList.remove("hovering");
-            return;
-        } else {
-            entry.target.classList.remove("blured");
-            entry.target.classList.add("hovering");
-        }
-    })
-}, Options);
-const box2observer = new IntersectionObserver(function(entries, box2observer) {
-    entries.forEach(entry => {
-        // console.log(entry.target);
-        if (!entry.isIntersecting) {
-            entry.target.classList.add("blured");
-            entry.target.classList.remove("hovering");
-            return;
-        } else {
-            entry.target.classList.remove("blured");
-            entry.target.classList.add("hovering");
-        }
-    })
-}, Options);
-const box3observer = new IntersectionObserver(function(entries, box3observer) {
-    entries.forEach(entry => {
-        // console.log(entry.target);
-        if (!entry.isIntersecting) {
-            entry.target.classList.add("blured");
-            entry.target.classList.remove("hovering");
-            return;
-        } else {
-            entry.target.classList.remove("blured");
-            entry.target.classList.add("hovering");
-        }
-    })
-}, Options);
 
-box1observer.observe(boxContent1)
-box2observer.observe(boxContent2)
-box3observer.observe(boxContent3)
+
 
 
 
